@@ -10,25 +10,35 @@ import org.junit.Test;
 
 public class MyInteger_Test {
 
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
-
+	
 	@Test
-	public void test() {
-		assertTrue(1==1);
+	public void testIsEven(){
+		System.out.println("Test isEven");
+		MyInteger variable = new MyInteger();
+		variable.setiValue(20);
+		boolean bExpectedResult = true;
+		boolean bActualResult = variable.isEven();
+		assertEquals("test isEven() failed", bExpectedResult, bActualResult);
 	}
+	
+	@Test
+	public void testIsOdd(){
+		System.out.println("Test isOdd");
+		MyInteger variable = new MyInteger();
+		variable.setiValue(15);
+		boolean bExpectedResult = true;
+		boolean bActualResult = variable.isOdd();
+		asserEquals("test isOdd() failed", bExpectedResult, bActualResult);
+	}
+	
+	@Test
+	public void testIsPrime(){
+		System.out.println("Test isOdd");
+		MyInteger variable = new MyInteger();
+		variable.setiValue(23);
+		boolean bExpectedResult = true;
+		boolean bActualResult = variable.isPrime();
+		asserEquals("test isPrime() failed", bExpectedResult, bActualResult);
+		}
 
 }
