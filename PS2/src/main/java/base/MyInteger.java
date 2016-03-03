@@ -1,6 +1,10 @@
 package base;
 
 public class MyInteger {
+	
+	public MyInteger(int a){
+		setiValue(a);
+	}
 	private int iValue;
 	
 	public int getiValue() {
